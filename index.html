@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Aura Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- STARTSEITE / MODUS-AUSWAHL -->
+  <div id="start-screen" class="screen active">
+    <div class="welcome-container">
+      <h1>Aura Studio</h1>
+      <p>Wähle dein kreatives Erlebnis im Fine-Line-Stil.</p>
+      
+      <div class="mode-cards">
+        <div class="mode-card" id="btn-paint-mode">
+          <div class="card-icon">🎨</div>
+          <div class="card-text">
+            <h3>Malen nach Zahlen</h3>
+            <p>Freies, realistisches Malen mit Pinsel auf Konturen.</p>
+          </div>
+        </div>
+
+        <div class="mode-card" id="btn-diamond-mode">
+          <div class="card-icon">💎</div>
+          <div class="card-text">
+            <h3>Diamond Painting</h3>
+            <p>Setze glänzende Steinchen Stein für Stein auf das Raster.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HAUPT-APP / EDITOR -->
+  <div id="app-screen" class="screen">
+    <header>
+      <button class="icon-btn" id="btn-back">← Menü</button>
+      <h2 id="app-title">Studio</h2>
+      <div class="header-tools">
+        <span id="label-size">Größe</span>
+        <input type="range" id="brushSize" min="5" max="35" value="14">
+        <button class="icon-btn" id="btn-clear">Reset</button>
+      </div>
+    </header>
+
+    <div id="canvas-container">
+      <canvas id="paintCanvas"></canvas>
+      <canvas id="overlayCanvas"></canvas>
+
+      <!-- SCHWEBENDE, VERSCHIEBBARE & FESTKLEMBARE PALETTE -->
+      <div id="floating-palette">
+        <div id="palette-handle">
+          <span>Farbpalette</span>
+          <button id="btn-dock" title="Festklemmen / Docken">📌</button>
+        </div>
+        <div id="swatches-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.code.js"></script>
+</body>
+</html>
